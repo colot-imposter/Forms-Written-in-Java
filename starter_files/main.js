@@ -100,5 +100,31 @@ let forhtml = document.getElementById('fields')
 for (var i = 0; i < formData.length; i++) {
   let input = document.createElement('input');
   input.setAttribute('type', formData[i].type);
+  input.setAttribute('placeholder', formData[i].label);
+  input.setAttribute('id', formData[i].id);
+  input.setAttribute('options', formData[i].option);
+  // input.setAttribute('icon', formData[i].icon);
+
+
+
   forhtml.appendChild(input);
 }
+
+console.log(formData[4].options);
+  let Options = formData[4].options;
+
+console.log(Options);
+  for (var j = 0; j < Options.length; j++) {
+      let selectWheel=[];
+    // let selecter[i]===formData.options[i]
+      let inputLANG =  document.createElement('option');
+      inputLANG.setAttribute('label', Options[j].label);
+      console.log(Options[j]);
+      inputLANG.setAttribute('value', Options[j].value);
+      selectWheel.appendChild(inputLANG);
+    }
+
+
+// let submitbutton = getElementsbyTag('button')
+
+// submitbutton.addEventListener('click', )
